@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "1b7c9725-3e90-45f3-9833-a2116dd486bf",
+		"name": "SpringBootApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EndUser - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/endusers/101"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/admin/102"
+			},
+			"response": []
+		},
+		{
+			"name": "M2M - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/m2m/102"
+			},
+			"response": []
+		},
+		{
+			"name": "EndUser - List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8080/api/endusers/"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin - List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer "
+					}
+				],
+				"url": "http://localhost:8080/api/admin/"
+			},
+			"response": []
+		},
+		{
+			"name": "M2M - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/m2m/?clientId=client1&clientSecret=client1Secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"m2m",
+						""
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "client1"
+						},
+						{
+							"key": "clientSecret",
+							"value": "client1Secret"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EndUser - Add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "yeni istek"
+				},
+				"url": "http://localhost:8080/api/endusers/"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin - Add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "yeni istek"
+				},
+				"url": "http://localhost:8080/api/admin/"
+			},
+			"response": []
+		},
+		{
+			"name": "M2M - Add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer "
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "yeni istek"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/m2m/?clientId=client1&clientSecret=client1Secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"m2m",
+						""
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "client1"
+						},
+						{
+							"key": "clientSecret",
+							"value": "client1Secret"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EndUser - Delete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer s",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8080/api/endusers/delete/101"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin - Delete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer s"
+					}
+				],
+				"url": "http://localhost:8080/api/admin/delete/101"
+			},
+			"response": []
+		},
+		{
+			"name": "M2M - Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/m2m/delete/102?clientId=client1&clientSecret=client1Secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"m2m",
+						"delete",
+						"102"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "client1"
+						},
+						{
+							"key": "clientSecret",
+							"value": "client1Secret"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
